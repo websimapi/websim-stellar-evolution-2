@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 // Initialize WebsimSocket for multiplayer functionality
 const room = new WebsimSocket();
 
@@ -533,6 +530,7 @@ function App() {
   );
 }
 
-// Render the app
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-
+document.addEventListener('DOMContentLoaded', () => {
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(React.createElement(App));
+});
